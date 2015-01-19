@@ -1,0 +1,8 @@
+<html>
+<head>
+    <title>Gestor de Negócios Seguradores</title>
+</head>
+<body>
+<p>Olá $cobranca.cliente.nome, aqui esta o seu boleto.</p>
+</body>
+</html>

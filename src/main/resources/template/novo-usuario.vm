@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Gestor de Negócios Seguradores</title>
+    </head>
+    <body>
+        <h1>Seja bem vindo ao GNSNET - Gestor de Negócios Seguradores</h1>
+        <p>Olá $usuario.nome, sua conta foi criada com sucesso no sistema.</p>
+        <p><a href="http://www.gnsnet.com.br">Clique aqui</a> para acessa-la</p>
+        <p>Sua senha é $usuario.cleanPassword</p>
+    </body>
+</html>

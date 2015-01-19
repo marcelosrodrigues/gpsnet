@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="456" />
+        <property name="username" value="marsilvarodrigues@gmail.com" />
+        <property name="password" value="aceshigh" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.debug">true</prop>
+                <prop key="mail.smtp.port">456</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.host">smtp.gmail.com</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+                <prop key="mail.smtp.socketFactory.port">465</prop>
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.socketFactory.fallback">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="velocityEngine"
+          class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
+        </property>
+    </bean>
+
+    <bean id="novoUsuario" class="com.pmrodrigues.gnsnet.services.impl.EmailServiceImpl">
+        <property name="from" value="marsilvarodrigues@gmail.com" />
+    </bean>
+
+    <bean id="boleto" class="com.pmrodrigues.gnsnet.services.impl.EmailServiceImpl">
+        <property name="from" value="marsilvarodrigues@gmail.com" />
+    </bean>
+
+
+</beans>

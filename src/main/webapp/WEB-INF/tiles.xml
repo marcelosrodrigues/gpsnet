@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    
+    <definition name="base" template="/WEB-INF/template/principal.jsp">        
+        <put-attribute name="header" />
+        <put-attribute name="conteudo" value="" />
+    </definition>
+
+    <definition name="index" extends="base">
+        <put-attribute name="header" value="Dashboard" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/index.jsp" />
+    </definition>
+
+    <definition name="usuario/new.usuario.prepare" extends="base">
+        <put-attribute name="header" value="Usuário" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/usuario/novo.jsp" />
+    </definition>
+
+    <definition name="usuario/*/new.usuario.prepare" extends="usuario/new.usuario.prepare" />
+
+    <definition name="usuario/new.usuario.list" extends="base">
+        <put-attribute name="header" value="Usuário" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/usuario/index.jsp" />
+    </definition>
+
+    <definition name="empresa/formulario-template" extends="base">
+        <put-attribute name="header" value="Empresa" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/empresa/formulario.jsp" />
+    </definition>
+
+    <definition name="empresa/show-template" extends="empresa/formulario-template" />
+
+    <definition name="empresa/*/show-template" extends="empresa/formulario-template" />
+
+    <definition name="empresa/index-template" extends="base">
+        <put-attribute name="header" value="Empresas" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/empresa/index.jsp" />
+    </definition>
+
+    <definition name="empresa/search-template" extends="empresa/index-template" />
+
+
+</tiles-definitions>

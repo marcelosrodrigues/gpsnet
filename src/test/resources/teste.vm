@@ -1,0 +1,7 @@
+<html>
+<body>
+    <p>TESTE $usuario.nome</p>
+    <p>TESTE $usuario.email</p>
+    <p>TESTE $usuario.cleanPassword</p>
+</body>
+</html>
