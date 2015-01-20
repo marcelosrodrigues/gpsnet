@@ -12,9 +12,9 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/novogps" />
-        <property name="username" value="postgres" />
-        <property name="password" value="postgres" />
+        <property name="url" value="jdbc:postgresql://ec2-54-243-51-102.compute-1.amazonaws.com:5432/d9jkrn814nd3s" />
+        <property name="username" value="hgwmuagmnhsied" />
+        <property name="password" value="mcBZxyn9reSX3JUjGPusCyJfEG" />
     </bean>
 
     <bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator"/>

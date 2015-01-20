@@ -22,6 +22,28 @@
         <flyway.password>postgres</flyway.password>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <flyway.database.url>jdbc:postgresql://localhost:5432/novogps</flyway.database.url>
+                <flyway.username>postgres</flyway.username>
+                <flyway.password>postgres</flyway.password>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>heroku</id>
+            <properties>
+                <flyway.database.url>jdbc:postgresql://ec2-54-243-51-102.compute-1.amazonaws.com:5432/d9jkrn814nd3s</flyway.database.url>
+                <flyway.username>hgwmuagmnhsied</flyway.username>
+                <flyway.password>mcBZxyn9reSX3JUjGPusCyJfEG</flyway.password>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
