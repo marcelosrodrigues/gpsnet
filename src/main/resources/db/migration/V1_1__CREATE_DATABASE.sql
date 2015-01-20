@@ -22,10 +22,6 @@ CREATE TABLE cliente (
     uf character varying(255)
 );
 
-
-ALTER TABLE public.cliente OWNER TO postgres;
-
-
 CREATE TABLE cobranca (
     id bigint NOT NULL,
     digitoagencia character varying(255),
@@ -47,13 +43,6 @@ CREATE TABLE cobranca (
     status integer
 );
 
-
-ALTER TABLE public.cobranca OWNER TO postgres;
-
---
--- Name: cobranca_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE cobranca_id_seq
     START WITH 1
     INCREMENT BY 1
@@ -62,11 +51,6 @@ CREATE SEQUENCE cobranca_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.cobranca_id_seq OWNER TO postgres;
-
---
--- Name: cobranca_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
 
 ALTER SEQUENCE cobranca_id_seq OWNED BY cobranca.id;
 
@@ -86,13 +70,6 @@ CREATE TABLE empresa (
     uf character varying(255)
 );
 
-
-ALTER TABLE public.empresa OWNER TO postgres;
-
---
--- Name: empresa_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE empresa_id_seq
     START WITH 1
     INCREMENT BY 1
@@ -100,8 +77,6 @@ CREATE SEQUENCE empresa_id_seq
     NO MAXVALUE
     CACHE 1;
 
-
-ALTER TABLE public.empresa_id_seq OWNER TO postgres;
 
 --
 -- Name: empresa_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -119,9 +94,6 @@ CREATE TABLE estado (
     nome character varying(255) NOT NULL
 );
 
-
-ALTER TABLE public.estado OWNER TO postgres;
-
 --
 -- Name: grupo; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
@@ -131,13 +103,6 @@ CREATE TABLE grupo (
     nome character varying(255) NOT NULL
 );
 
-
-ALTER TABLE public.grupo OWNER TO postgres;
-
---
--- Name: grupo_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE grupo_id_seq
     START WITH 1
     INCREMENT BY 1
@@ -145,12 +110,6 @@ CREATE SEQUENCE grupo_id_seq
     NO MAXVALUE
     CACHE 1;
 
-
-ALTER TABLE public.grupo_id_seq OWNER TO postgres;
-
---
--- Name: grupo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
 
 ALTER SEQUENCE grupo_id_seq OWNED BY grupo.id;
 
@@ -165,12 +124,6 @@ CREATE TABLE membro (
 );
 
 
-ALTER TABLE public.membro OWNER TO postgres;
-
---
--- Name: usuario; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
---
-
 CREATE TABLE usuario (
     id bigint NOT NULL,
     bloqueado boolean,
@@ -181,26 +134,12 @@ CREATE TABLE usuario (
     nome character varying(255) NOT NULL
 );
 
-
-ALTER TABLE public.usuario OWNER TO postgres;
-
---
--- Name: usuario_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE usuario_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
-ALTER TABLE public.usuario_id_seq OWNER TO postgres;
-
---
--- Name: usuario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
 
 ALTER SEQUENCE usuario_id_seq OWNED BY usuario.id;
 
