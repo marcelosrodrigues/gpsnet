@@ -270,13 +270,13 @@ INSERT INTO ESTADO (UF,NOME) VALUES ('AC','Acre'),
 ('TO','Tocantins'),
 ('DF','Distrito Federal');
 
-insert into usuario (id, bloqueado, email, password, tentativas, nome) values ( usuario_id_seq.nextval , false , 'marcelosrodrigues@globo.com' , md5('2pk0#3ty?') , 0 , 'MARCELO DA SILVA RODRIGUES');
+insert into usuario (bloqueado, email, password, tentativas, nome) values ( false , 'marcelosrodrigues@globo.com' , md5('2pk0#3ty?') , 0 , 'MARCELO DA SILVA RODRIGUES');
 
-insert into grupo ( id, nome ) values ( grupo_id_seq.nextval , 'Administrador' );
-insert into membro ( membro_id, grupo_id ) values ( usuario_id_seq.lastval , grupo_id_seq.lastval );
+insert into grupo (  nome ) values ( 'Administrador' );
+insert into membro ( membro_id, grupo_id ) values ( 1 , 1 );
 
-insert into grupo ( id, nome ) values ( grupo_id_seq.nextval , 'Corretor' );
-insert into grupo ( id, nome ) values ( grupo_id_seq.nextval , 'Financeiro' );
+insert into grupo ( nome ) values ('Corretor' );
+insert into grupo ( nome ) values ( 'Financeiro' );
 
 
 
