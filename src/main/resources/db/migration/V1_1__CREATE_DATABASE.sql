@@ -70,6 +70,7 @@ CREATE TABLE empresa (
     uf character varying(255)
 );
 
+
 CREATE SEQUENCE empresa_id_seq
     START WITH 1
     INCREMENT BY 1
