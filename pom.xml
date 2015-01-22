@@ -34,12 +34,16 @@
 
         <profile>
             <id>heroku</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <flyway.database.url>jdbc:postgresql://ec2-54-243-51-102.compute-1.amazonaws.com:5432/d9jkrn814nd3s</flyway.database.url>
                 <flyway.username>hgwmuagmnhsied</flyway.username>
                 <flyway.password>mcBZxyn9reSX3JUjGPusCyJfEG</flyway.password>
             </properties>
         </profile>
+
     </profiles>
 
     <dependencies>
