@@ -13,4 +13,5 @@ public interface Constante {
     String OBJECT = "object";
     Integer TAMANHO_PAGINA = 20;
     String ESTADOS = "estados";
+    String EMPRESAS = "empresas";
 }

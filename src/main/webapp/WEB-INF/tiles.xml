@@ -42,5 +42,21 @@
 
     <definition name="empresa/search-template" extends="empresa/index-template" />
 
+    <definition name="operadora/formulario-template" extends="base">
+        <put-attribute name="header" value="Operadora" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/operadora/formulario.jsp" />
+    </definition>
+
+    <definition name="operadora/show-template" extends="operadora/formulario-template" />
+
+    <definition name="operadora/*/show-template" extends="operadora/formulario-template" />
+
+    <definition name="operadora/index-template" extends="base">
+        <put-attribute name="header" value="Operadoras" />
+        <put-attribute name="conteudo" value="/WEB-INF/template/formulario/operadora/index.jsp" />
+    </definition>
+
+    <definition name="operadora/search-template" extends="operadora/index-template" />
+
 
 </tiles-definitions>

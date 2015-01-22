@@ -5,13 +5,17 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="pmrodrigues" uri="/WEB-INF/pmrodrigues.tld" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
+<sec:authentication var="user" property="principal" />
 <pmrodrigues:summary text="Não foi possível salvar o usuário." />
 
 <form action="<c:url value='/usuario/salvar.do' />" role="form" method="post">
     <sec:csrfInput />
     <input type="hidden" name="usuario.id" value="${usuario.id}" />
     <fieldset>
+
+        <c:if test="${user != null and user.empresa == null }">
+            <pmrodrigues:combobox label="empresa" errorField="empresa" value="${empresas}" id="usuario.empresa" valueField="id" labelField="nome" selected="usuario.empresa" />
+        </c:if>
 
         <pmrodrigues:textfield label="usuario.nome"
                                value="${usuario.nome}"

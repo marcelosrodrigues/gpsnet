@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -28,7 +29,8 @@ public class AuthenticationProvider implements org.springframework.security.auth
         final String email = (String) authentication.getPrincipal();
         final String password = (String) authentication.getCredentials();
 
-        return new UserAuthentication(service.doAuthentication(email,password));
+        final UserAuthentication authenticated = new UserAuthentication(service.doAuthentication(email,password));
+        return authenticated;
     }
 
     @Override

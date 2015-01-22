@@ -8,6 +8,7 @@
 
 	<import resource="classpath:applicationContext-data.xml" />
     <import resource="classpath:applicationContext-email.xml" />
+    <import resource="classpath:applicationContext-security.xml" />
 
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer" >
         <property name="definitions">

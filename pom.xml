@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.1.0.RELEASE</spring.version>
         <spring.security.version>3.2.5.RELEASE</spring.security.version>
-        <hibernate.version>4.3.6.Final</hibernate.version>
+        <hibernate.version>4.2.7.Final</hibernate.version>
         <tiles.version>3.0.4</tiles.version>
         <jmock.version>2.6.0</jmock.version>
         <slf4j.version>1.7.5</slf4j.version>
@@ -39,9 +39,6 @@
                 <flyway.username>hgwmuagmnhsied</flyway.username>
                 <flyway.password>mcBZxyn9reSX3JUjGPusCyJfEG</flyway.password>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
     </profiles>
 

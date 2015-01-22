@@ -10,7 +10,7 @@
             <a href="/empresa/index.do">Empresas</a>
         </li>
         <li>
-            <a href="notifications.html">Notifications</a>
+            <a href="/operadora/index.do">Operadoras</a>
         </li>
         <li>
             <a href="typography.html">Typography</a>

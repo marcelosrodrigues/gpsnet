@@ -7,6 +7,7 @@ import com.pmrodrigues.gnsnet.controllers.UserController;
 import com.pmrodrigues.gnsnet.exceptions.DuplicateRegisterException;
 import com.pmrodrigues.gnsnet.models.Grupo;
 import com.pmrodrigues.gnsnet.models.Usuario;
+import com.pmrodrigues.gnsnet.repository.CompanyRepository;
 import com.pmrodrigues.gnsnet.repository.ResultList;
 import com.pmrodrigues.gnsnet.services.GroupService;
 import com.pmrodrigues.gnsnet.services.UserService;
@@ -36,7 +37,8 @@ public class TestUserController {
     private MockValidator validator = new ValidatorMocked();
     private UserService service = context.mock(UserService.class);
     private GroupService groupService = context.mock(GroupService.class);
-    private UserController controller = new UserController(service,groupService,result,validator);
+    private CompanyRepository companyRepository = context.mock(CompanyRepository.class);
+    private UserController controller = new UserController(service,groupService,companyRepository,result,validator);
 
 
     @Test
